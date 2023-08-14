@@ -95,3 +95,17 @@ userObj2 = {
     isAdmin: false,
     phone: "+5592123412349"
 }
+
+// ANYTYPE
+
+let anyTest;
+
+anyTest = 12
+anyTest = "paulocorrea"
+anyTest = true
+anyTest = []
+anyTest = {}
+
+let testAnyArray: any[]
+
+testAnyArray = [1, "dois", true]
