@@ -52,6 +52,46 @@ let testNumberArray: number[]
 
 testNumberArray = [1, 2, 2]
 
+// TIPOS DE ARRAYS COMPOSTOS
+
 let testStringOrNumberArray: (string | number) []
 
 testStringOrNumberArray = [1, "dois", 3, "quatro"]
+
+// OBJECT
+
+let user = {
+    username: "paulo",
+    age: 30,
+    isAdmin: true
+}
+
+user.username = "gabriel"
+user.age = 29
+user.isAdmin = false
+
+let userObj: {
+    userName: string,
+    age: number,
+    isAdmin: boolean
+}
+
+userObj = {
+    userName: "Gabriel",
+    age: 28,
+    isAdmin: true
+}
+
+let userObj2: {
+    userName: string,
+    age: number,
+    isAdmin: boolean,
+    phone?: string
+}
+
+userObj2 = {
+    userName: "jhon",
+    age: 33,
+    isAdmin: false,
+    phone: "+5592123412349"
+}
