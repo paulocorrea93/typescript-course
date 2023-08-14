@@ -2,17 +2,17 @@
 
 let variable = "hello";
 
-variable = "hi"
+variable = "hi";
 
 let age = 30;
 
-let ageWithType: number
+let ageWithType: number;
 
 ageWithType = 30;
 
 let testString: string;
 
-testString = "hello"
+testString = "hello";
 
 let testBoolean: boolean;
 
@@ -22,90 +22,111 @@ testBoolean = true;
 
 let stringOrNumber: string | number;
 
-stringOrNumber = 12
+stringOrNumber = 12;
 
-stringOrNumber = "paulo"
+stringOrNumber = "paulo";
 
 // ARRAY
 
-let names = ["paulo", "gabriel", "barros"]
+let names = ["paulo", "gabriel", "barros"];
 
-names.push("correa")
+names.push("correa");
 
 // names.push(2) ERRO
 
-let numbers = [1, 2, 3]
+let numbers = [1, 2, 3];
 
-numbers.push(4)
+numbers.push(4);
 
 // numbers.push("paulo") ERRO
 
 //  ARRAYS COM TIPOS
 
-let testStringArray: string[]
+let testStringArray: string[];
 
 // testStringArray = [1, 2, 3] ERRO
 
-testStringArray = ["paulo", "correa"]
+testStringArray = ["paulo", "correa"];
 
-let testNumberArray: number[]
+let testNumberArray: number[];
 
-testNumberArray = [1, 2, 2]
+testNumberArray = [1, 2, 2];
 
 // TIPOS DE ARRAYS COMPOSTOS
 
-let testStringOrNumberArray: (string | number) []
+let testStringOrNumberArray: (string | number)[];
 
-testStringOrNumberArray = [1, "dois", 3, "quatro"]
+testStringOrNumberArray = [1, "dois", 3, "quatro"];
 
 // OBJECT
 
 let user = {
-    username: "paulo",
-    age: 30,
-    isAdmin: true
-}
+  username: "paulo",
+  age: 30,
+  isAdmin: true,
+};
 
-user.username = "gabriel"
-user.age = 29
-user.isAdmin = false
+user.username = "gabriel";
+user.age = 29;
+user.isAdmin = false;
 
 let userObj: {
-    userName: string,
-    age: number,
-    isAdmin: boolean
-}
+  userName: string;
+  age: number;
+  isAdmin: boolean;
+};
 
 userObj = {
-    userName: "Gabriel",
-    age: 28,
-    isAdmin: true
-}
+  userName: "Gabriel",
+  age: 28,
+  isAdmin: true,
+};
 
 let userObj2: {
-    userName: string,
-    age: number,
-    isAdmin: boolean,
-    phone?: string
-}
+  userName: string;
+  age: number;
+  isAdmin: boolean;
+  phone?: string;
+};
 
 userObj2 = {
-    userName: "jhon",
-    age: 33,
-    isAdmin: false,
-    phone: "+5592123412349"
-}
+  userName: "jhon",
+  age: 33,
+  isAdmin: false,
+  phone: "+5592123412349",
+};
 
 // ANYTYPE
 
 let anyTest;
 
-anyTest = 12
-anyTest = "paulocorrea"
-anyTest = true
-anyTest = []
-anyTest = {}
+anyTest = 12;
+anyTest = "paulocorrea";
+anyTest = true;
+anyTest = [];
+anyTest = {};
 
-let testAnyArray: any[]
+let testAnyArray: any[];
 
-testAnyArray = [1, "dois", true]
+testAnyArray = [1, "dois", true];
+
+// FUNCTIONS
+
+let testFunction = () => {
+  console.log("hi, welcome");
+};
+
+let functionType = (): string => {
+  // console.log("paulo") ERRO
+  return "Paulo";
+};
+
+let multiple = (num: number) => {
+  return num * 2;
+};
+
+let sum = (num1: number, num2: number, another?:number) => {
+   return num1 + num2
+}
+
+sum(2,3,4)
