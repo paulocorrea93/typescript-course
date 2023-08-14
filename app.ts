@@ -1,3 +1,5 @@
+// TIPOS DE VARIÁVEIS SIMPLES
+
 let variable = "hello";
 
 variable = "hi"
@@ -15,3 +17,11 @@ testString = "hello"
 let testBoolean: boolean;
 
 testBoolean = true;
+
+// TIPOS DE VARIÁVEIS COMPOSTOS
+
+let stringOrNumber: string | number;
+
+stringOrNumber = 12
+
+stringOrNumber = "paulo"
