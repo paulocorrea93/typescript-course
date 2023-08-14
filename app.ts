@@ -125,8 +125,42 @@ let multiple = (num: number) => {
   return num * 2;
 };
 
-let sum = (num1: number, num2: number, another?:number) => {
-   return num1 + num2
-}
+let sum = (num1: number, num2: number, another?: number) => {
+  return num1 + num2;
+};
 
-sum(2,3,4)
+sum(2, 3, 4);
+
+// TYPE ALIASES
+
+type UserType = {
+  username: string;
+  age: number;
+  phone?: string;
+};
+
+let testUser = (user: UserType) => {
+  console.log(user.age);
+};
+
+// FUNCTOIN ASSIGNATURE
+
+type myFunction = (a: number, b: string) => void;
+
+let write: myFunction = (str, num) => {
+  console.log(num + "test" + str);
+};
+
+type UserType2 = {
+  username: string;
+  age: number;
+  phone?: string;
+  theme: "light" | "dark";
+};
+
+const userWithTheme: UserType2 = {
+  username: "paulo",
+  age: 30,
+  // theme: "pink" ERRO
+  theme: "dark",
+};
