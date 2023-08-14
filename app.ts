@@ -51,3 +51,7 @@ testStringArray = ["paulo", "correa"]
 let testNumberArray: number[]
 
 testNumberArray = [1, 2, 2]
+
+let testStringOrNumberArray: (string | number) []
+
+testStringOrNumberArray = [1, "dois", 3, "quatro"]
