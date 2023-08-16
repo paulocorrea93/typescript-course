@@ -181,10 +181,64 @@ const emp: IEmployee = {
   username: "paulo",
   email: "paulo@gmail.com",
   age: 30,
-  employeeId: 1
-}
+  employeeId: 1,
+};
 const client: IUser = {
   username: "paulo",
   email: "paulo@gmail.com",
-  age: 30
+  age: 30,
+};
+
+// TOPICOS GERAIS DE TYPESCRIPT
+
+interface IAuthor {
+  id: number;
+  username: string;
+}
+
+interface ICategory {
+  id: number;
+  title: string;
+}
+
+interface IPost {
+  id: number;
+  title: string;
+  desc: string;
+  extra: IAuthor[] | ICategory[];
+}
+
+interface IPostBetter<T> {
+  id: number;
+  title: string;
+  desc: string;
+  extra: T[];
+}
+
+const testMe: IPostBetter<String> = {
+  id: 2,
+  title: "titulo",
+  desc: "descrição",
+  extra: ["palavra1", "palavra2"],
+};
+
+interface IPostEvenBetter<T extends object> {
+  id: number;
+  title: string;
+  desc: string;
+  extra: T[];
+}
+
+const testMe2: IPostEvenBetter<{ id: number; usernmae: string }> = {
+  id: 3,
+  title: "titulo 2",
+  desc: "descrição 2",
+  extra: [{ id: 4, usernmae: "paulo" }],
+};
+
+const testMe3: IPostEvenBetter<ICategory> = {
+  id: 5,
+  title: "titulo 3",
+  desc: "descrição 4",
+  extra: [{id: 7, title: "titulo 7"}]
 }
