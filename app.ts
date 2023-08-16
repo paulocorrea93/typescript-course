@@ -143,7 +143,7 @@ let testUser = (user: UserType) => {
   console.log(user.age);
 };
 
-// FUNCTOIN ASSIGNATURE
+// FUNCTION ASSIGNATURE
 
 type myFunction = (a: number, b: string) => void;
 
@@ -164,3 +164,27 @@ const userWithTheme: UserType2 = {
   // theme: "pink" ERRO
   theme: "dark",
 };
+
+// INTERFACES
+
+interface IUser {
+  username: string;
+  email: string;
+  age: number;
+}
+
+interface IEmployee extends IUser {
+  employeeId: number;
+}
+
+const emp: IEmployee = {
+  username: "paulo",
+  email: "paulo@gmail.com",
+  age: 30,
+  employeeId: 1
+}
+const client: IUser = {
+  username: "paulo",
+  email: "paulo@gmail.com",
+  age: 30
+}
