@@ -1,11 +1,11 @@
 // FUNÇÕES ANONIMAS TYPESCRIPT
 
-setTimeout(() => {
-  const sallary: number = 1000;
+// setTimeout(() => {
+//   const sallary: number = 1000;
 
-  // console.log(parseFloat(sallary))
-  console.log(sallary);
-}, 2000);
+//   // console.log(parseFloat(sallary))
+//   console.log(sallary);
+// }, 2000);
 
 // TIPOS DE OBJETOS
 
@@ -48,3 +48,24 @@ let showBalance = (balance: string | number) => {
 
 showBalance("100")
 showBalance(500)
+
+let showuserRole = (role: boolean | string) => {
+    if(typeof role === "boolean"){
+        return `usuário não aprovado`
+    }
+    return `a função do usuário é ${role}`
+}
+
+console.log(showuserRole("Admin"))
+console.log(showuserRole(false))
+
+// TYPE ALIAS
+
+type ID = string | number
+
+let showId = (id: ID) => {
+    console.log(`o id é: ${id}`)
+}
+
+showId(1)
+showId("500")
