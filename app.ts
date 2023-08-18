@@ -28,6 +28,8 @@ let showNumbers = (a: number, b: number, c?: number) => {
 
 showNumbers(1, 2);
 
+// VALIDAÇÃO TYPESCRIPT
+
 let advancedGreetings = (firstName: string, lastName?: string) => {
   if (lastName !== undefined) {
     return `Olá, ${firstName} ${lastName}, tudo bem?`;
