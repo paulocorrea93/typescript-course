@@ -19,3 +19,18 @@ let showNumbers = (a, b, c) => {
     console.log(`"C" = ${c}`);
 };
 showNumbers(1, 2);
+// VALIDAÇÃO TYPESCRIPT
+let advancedGreetings = (firstName, lastName) => {
+    if (lastName !== undefined) {
+        return `Olá, ${firstName} ${lastName}, tudo bem?`;
+    }
+    return `Olá ${firstName}, tudo bem?`;
+};
+console.log(advancedGreetings("Paulo", "Correa"));
+console.log(advancedGreetings("Gabriel"));
+// UNION TYPE
+let showBalance = (balance) => {
+    console.log(`O saldo da conta é R$${balance}`);
+};
+showBalance("100");
+showBalance(500);

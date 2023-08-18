@@ -39,3 +39,12 @@ let advancedGreetings = (firstName: string, lastName?: string) => {
 
 console.log(advancedGreetings("Paulo", "Correa"));
 console.log(advancedGreetings("Gabriel"));
+
+// UNION TYPE
+
+let showBalance = (balance: string | number) => {
+    console.log(`O saldo da conta é R$${balance}`)
+}
+
+showBalance("100")
+showBalance(500)
