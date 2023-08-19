@@ -43,29 +43,49 @@ console.log(advancedGreetings("Gabriel"));
 // UNION TYPE
 
 let showBalance = (balance: string | number) => {
-    console.log(`O saldo da conta é R$${balance}`)
-}
+  console.log(`O saldo da conta é R$${balance}`);
+};
 
-showBalance("100")
-showBalance(500)
+showBalance("100");
+showBalance(500);
 
 let showuserRole = (role: boolean | string) => {
-    if(typeof role === "boolean"){
-        return `usuário não aprovado`
-    }
-    return `a função do usuário é ${role}`
-}
+  if (typeof role === "boolean") {
+    return `usuário não aprovado`;
+  }
+  return `a função do usuário é ${role}`;
+};
 
-console.log(showuserRole("Admin"))
-console.log(showuserRole(false))
+console.log(showuserRole("Admin"));
+console.log(showuserRole(false));
 
 // TYPE ALIAS
 
-type ID = string | number
+type ID = string | number;
 
 let showId = (id: ID) => {
-    console.log(`o id é: ${id}`)
+  console.log(`o id é: ${id}`);
+};
+
+showId(1);
+showId("500");
+
+// INTERFACES
+
+interface Point {
+  x: number;
+  y: number;
+  z: number;
 }
 
-showId(1)
-showId("500")
+const showCoords = (obj: Point) => {
+  console.log(`x = ${obj.x}, y = ${obj.y}, z = ${obj.z}`);
+};
+
+const coordObj: Point = {
+  x: 10,
+  y: 15,
+  z: 20,
+};
+
+showCoords(coordObj);
