@@ -89,3 +89,17 @@ const coordObj: Point = {
 };
 
 showCoords(coordObj);
+
+// INTERFACE X TYPE ALIAS
+
+interface Person {
+  name: string
+}
+
+interface Person {
+  age: number
+}
+
+const somePerson: Person = {name: "Paulo", age: 30}
+
+console.log(somePerson)
