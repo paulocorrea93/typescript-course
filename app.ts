@@ -103,3 +103,27 @@ interface Person {
 const somePerson: Person = {name: "Paulo", age: 30}
 
 console.log(somePerson)
+
+// type personType = {
+//   name: string
+// }
+
+// type personType = {
+//   age: number
+// }
+
+// ERRO MODIFICADOR DUPLICADO, ESSE ERRO SE DA PORQUE O ALIAS NÃO SE PODE INCREMENTAR DURANTE O CÓDIGO
+
+// LITERAL TYPES
+
+let test: "testando"
+test = "testando"
+
+console.log(test)
+
+const showDirection = (direction: "left" | "right" | "center") => {
+  console.log(`a direção escolhida é: ${direction}`)
+}
+
+showDirection("center")
+showDirection("right")
