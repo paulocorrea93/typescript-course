@@ -74,3 +74,7 @@ const showDirection = (direction) => {
 };
 showDirection("center");
 showDirection("right");
+// NON NULL ASSERTION OPERATORS
+const p = document.getElementById("some-p");
+console.log(p.innerHTML);
+//com a exclamação o 'erro' é validado
