@@ -23,7 +23,7 @@ function operations(arr: number[], operator?: string | undefined) {
       console.log(sum);
     } else if (operator === "multiply") {
       const multiply = arr.reduce((i, total) => i * total);
-      console.log(multiply)
+      console.log(multiply);
     }
   } else {
     console.log("Por favor defina uma operação.");
@@ -31,5 +31,39 @@ function operations(arr: number[], operator?: string | undefined) {
 }
 
 operations([1, 2, 3]);
-operations([1, 2, 3], "sum")
-operations([5, 4], "multiply")
+operations([1, 2, 3], "sum");
+operations([5, 4], "multiply");
+
+// INSTANCE OF
+
+class User {
+  name;
+
+  constructor(name: string) {
+    this.name = name;
+  }
+}
+
+class superUser extends User {
+    constructor (name: string){
+       super(name) 
+    }
+}
+
+const jhon = new User("Jhon")
+const paul = new superUser("Paulo")
+
+console.log(jhon)
+console.log(paul)
+
+function userGreeting(user: object){
+    if(user instanceof superUser){
+        console.log(`Olá ${user.name}, seja bem-vindo, deseja acessar os dados do sistema?`)
+    } else if (user instanceof User){
+        console.log(`Bem-vindo ${user.name}.`)
+    }
+}
+
+userGreeting(jhon)
+userGreeting(paul)
+
