@@ -78,3 +78,8 @@ showDirection("right");
 const p = document.getElementById("some-p");
 console.log(p.innerHTML);
 //com a exclamação o 'erro' é validado
+//BIGINT
+let n;
+// n = 1 (erro porque o numero é pequeno)
+n = 1000n;
+//versão do ES2016 para ES2020
