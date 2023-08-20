@@ -45,25 +45,54 @@ class User {
 }
 
 class superUser extends User {
-    constructor (name: string){
-       super(name) 
+  constructor(name: string) {
+    super(name);
+  }
+}
+
+const jhon = new User("Jhon");
+const paul = new superUser("Paulo");
+
+console.log(jhon);
+console.log(paul);
+
+function userGreeting(user: object) {
+  if (user instanceof superUser) {
+    console.log(
+      `Olá ${user.name}, seja bem-vindo, deseja acessar os dados do sistema?`
+    );
+  } else if (user instanceof User) {
+    console.log(`Bem-vindo ${user.name}.`);
+  }
+}
+
+userGreeting(jhon);
+userGreeting(paul);
+
+// OPERADOR IN
+
+class Dog {
+  name;
+  breed;
+
+  constructor(name: string, breed?: string) {
+    this.name = name;
+    if (breed) {
+      this.breed = breed;
+    }
+  }
+}
+
+const turca = new Dog("Fofoca", "Turca")
+const bob = new Dog("Bob", "Pastor Alemão")
+
+function showDogDetails (dog: Dog){
+    if ('breed' in dog){
+        console.log(`${dog.name} é ${dog.breed}`)
+    } else {
+        console.log(`esse cachorro é um SRD`)
     }
 }
 
-const jhon = new User("Jhon")
-const paul = new superUser("Paulo")
-
-console.log(jhon)
-console.log(paul)
-
-function userGreeting(user: object){
-    if(user instanceof superUser){
-        console.log(`Olá ${user.name}, seja bem-vindo, deseja acessar os dados do sistema?`)
-    } else if (user instanceof User){
-        console.log(`Bem-vindo ${user.name}.`)
-    }
-}
-
-userGreeting(jhon)
-userGreeting(paul)
-
+showDogDetails(turca)
+showDogDetails(bob) 
