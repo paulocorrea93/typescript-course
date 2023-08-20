@@ -83,3 +83,12 @@ let n;
 // n = 1 (erro porque o numero é pequeno)
 n = 1000n;
 //versão do ES2016 para ES2020
+console.log(n);
+console.log(typeof n);
+console.log(n + 100n);
+// SYMBOL
+let symbolA = Symbol("a");
+let symbolB = Symbol("a");
+console.log(symbolA == symbolB);
+console.log(symbolA === symbolB);
+//o tipo symbol, deixa o valor da variavel como único, mesmo que seja ou tenha o mesmo valor, como no exemplo, symbolA não é igual a symbolB
