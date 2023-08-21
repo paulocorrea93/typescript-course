@@ -75,3 +75,8 @@ const doSomething = (x) => {
 };
 doSomething([1, 2, 3]);
 doSomething(4);
+//TIPO NEVER
+const showMessageError = (msg) => {
+    throw new Error(msg);
+};
+// showMessageError("Algum erro!") COMENTADO PARA NÃO PARAR EXECUÇÃO DOS PRÓXIMOS CÓDIGOS

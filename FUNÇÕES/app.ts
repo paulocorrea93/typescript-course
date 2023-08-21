@@ -104,3 +104,11 @@ const doSomething = (x: unknown) => {
 
 doSomething([1, 2, 3])
 doSomething(4)
+
+//TIPO NEVER
+
+const showMessageError = (msg: string): never => {
+    throw new Error(msg)
+}
+
+// showMessageError("Algum erro!") COMENTADO PARA NÃO PARAR EXECUÇÃO DOS PRÓXIMOS CÓDIGOS
