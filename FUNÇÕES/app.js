@@ -24,8 +24,21 @@ console.log(genericFunction(["um", "dois", "tres"]));
 function mergeObjects(obj1, obj2) {
     return {
         ...obj1,
-        ...obj2
+        ...obj2,
     };
 }
 const newObj = mergeObjects({ name: "Paulo Correa" }, { job: "software developer", age: 30 });
 console.log(newObj);
+//CONSTRAINT EM GENERIC FUNCTIONS
+function biggestNumber(a, b) {
+    let biggest;
+    if (+a > +b) {
+        biggest = a;
+    }
+    else {
+        biggest = b;
+    }
+    return biggest;
+}
+console.log(biggestNumber(22, 33));
+console.log(biggestNumber("44", "22"));
