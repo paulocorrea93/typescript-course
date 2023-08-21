@@ -64,3 +64,14 @@ const somaDefault = (n, m = 5) => {
 };
 console.log(somaDefault(10));
 console.log(somaDefault(10, 7));
+//PARAMETRO UNKNOWN
+const doSomething = (x) => {
+    if (Array.isArray(x)) {
+        console.log(x[0]);
+    }
+    else if (typeof x === "number") {
+        console.log("x é um número");
+    }
+};
+doSomething([1, 2, 3]);
+doSomething(4);
