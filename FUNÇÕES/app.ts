@@ -82,3 +82,12 @@ const modernGreeting = (name: string, greet?: string) => {
 
 console.log(modernGreeting("Paulo"))
 console.log(modernGreeting("Paulo", "Sr."))
+
+//PARAMETRO DEFAULT
+
+const somaDefault = (n: number, m = 5) => {
+    return m * n
+}
+
+console.log(somaDefault(10))
+console.log(somaDefault(10, 7))
