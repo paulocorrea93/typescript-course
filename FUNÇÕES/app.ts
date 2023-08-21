@@ -70,3 +70,15 @@ function mergeArr<T>(a: T[], b: T[]){
 console.log(mergeArr([1, 2, 3], [4, 5]))
 // console.log(mergeArr([1, 2, 3], ["teste", "testando"])) ADICIONAR GENERIC FUNCTION PARA ESPECIFICAR TIPO DE PARAMETRO
 console.log(mergeArr<Number | String>([1, 2, 3], ["teste", "testando"]))
+
+//PARAMETROS OPCIONAIS
+
+const modernGreeting = (name: string, greet?: string) => {
+    if(greet){
+       return `Olá ${greet} ${name}, tudo bem?`
+    }
+    return `Olá ${name}, tudo bem?`
+}
+
+console.log(modernGreeting("Paulo"))
+console.log(modernGreeting("Paulo", "Sr."))
