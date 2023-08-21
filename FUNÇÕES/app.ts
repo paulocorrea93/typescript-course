@@ -60,3 +60,13 @@ function biggestNumber<T extends number | string>(a: T, b: T): T {
 
 console.log(biggestNumber(22, 33))
 console.log(biggestNumber("44", "22"))
+
+//ESPECIFICAR TIPO DE ARGUMENTO
+
+function mergeArr<T>(a: T[], b: T[]){
+    return a.concat(b)
+}
+
+console.log(mergeArr([1, 2, 3], [4, 5]))
+// console.log(mergeArr([1, 2, 3], ["teste", "testando"])) ADICIONAR GENERIC FUNCTION PARA ESPECIFICAR TIPO DE PARAMETRO
+console.log(mergeArr<Number | String>([1, 2, 3], ["teste", "testando"]))
