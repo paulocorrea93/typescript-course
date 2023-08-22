@@ -77,3 +77,9 @@ const myFiveNumbers = [1, 2, 3, 4, 5];
 console.log(myFiveNumbers);
 const anotherPerson = ["Paulo", 30];
 console.log(anotherPerson);
+// 9 de 9 TUPLAS COM READONLY
+const showNumbers = (numbers) => {
+    console.log(numbers[0]);
+    console.log(numbers[1]);
+};
+showNumbers([3, 4]);

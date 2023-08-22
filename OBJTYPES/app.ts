@@ -165,3 +165,11 @@ const anotherPerson = ["Paulo", 30]
 
 console.log(anotherPerson)
 
+// 9 de 9 TUPLAS COM READONLY
+
+const showNumbers = (numbers: readonly [number, number]) => {
+  console.log(numbers[0])
+  console.log(numbers[1])
+}
+
+showNumbers([3, 4])
