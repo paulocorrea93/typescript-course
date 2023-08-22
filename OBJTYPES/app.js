@@ -56,3 +56,8 @@ const goku = {
 };
 console.log(paulo);
 console.log(goku, goku.superPower[1]);
+const Aragorn = {
+    name: "Aragorn",
+    type: "Sword"
+};
+console.log(Aragorn);
