@@ -61,3 +61,13 @@ const Aragorn = {
     type: "Sword"
 };
 console.log(Aragorn);
+// 7/9 READONLY ARRAY
+let myArray = ["Maçã", "Banana", "Laranja"];
+console.log(myArray);
+myArray.forEach((item) => {
+    console.log(`fruta: ${item}`);
+});
+myArray = myArray.map((item) => {
+    return `Fruta: ${item}`;
+});
+console.log(myArray);

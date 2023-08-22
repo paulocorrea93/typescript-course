@@ -132,3 +132,19 @@ const Aragorn: CharacterWeapon = {
 }
 
 console.log(Aragorn)
+
+// 7/9 READONLY ARRAY
+
+let myArray: ReadonlyArray<String> = ["Maçã", "Banana", "Laranja"]
+
+console.log(myArray)
+
+myArray.forEach((item) => {
+  console.log(`fruta: ${item}`)
+})
+
+myArray = myArray.map((item) => {
+  return `Fruta: ${item}`
+})
+
+console.log(myArray)
