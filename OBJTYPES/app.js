@@ -45,3 +45,14 @@ const coordX = {
 console.log(coordX);
 coordX.y = 20;
 console.log(coordX);
+const paulo = {
+    name: "Paulo",
+    race: "Human"
+};
+const goku = {
+    name: "Goku",
+    race: "Saiyan",
+    superPower: ["kamehameha", "teleport", "fly", "genki-dama"]
+};
+console.log(paulo);
+console.log(goku, goku.superPower[1]);

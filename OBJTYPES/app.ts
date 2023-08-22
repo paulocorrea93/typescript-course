@@ -87,3 +87,28 @@ console.log(coordX);
 coordX.y = 20;
 
 console.log(coordX)
+
+// 5/9 HERANÇA DE INTERFACES
+
+interface Human {
+  name: string,
+  race: string
+}
+
+interface SuperHuman extends Human {
+  superPower: string[]
+}
+
+const paulo: Human = {
+  name: "Paulo",
+  race: "Human"
+}
+
+const goku: SuperHuman = {
+  name: "Goku",
+  race: "Saiyan",
+  superPower: ["kamehameha", "teleport", "fly", "genki-dama"]
+}
+
+console.log(paulo)
+console.log(goku, goku.superPower[1])
