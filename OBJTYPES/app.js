@@ -16,3 +16,18 @@ const shirt = {
 };
 showProductDetails(shirt);
 showProductDetails({ name: "Tênis", price: 129.99, isAvailable: false });
+const showUserDetails = (user) => {
+    console.log(`O email do usuário é: ${user.email}`);
+    if (user.role) {
+        console.log(`e seu papel na empresa é: ${user.role}`);
+    }
+};
+const u1 = {
+    email: "paulo@email.com",
+    role: "admin"
+};
+const u2 = {
+    email: "gabriel@email.com"
+};
+showUserDetails(u1);
+showUserDetails(u2);

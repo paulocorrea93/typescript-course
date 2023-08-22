@@ -24,3 +24,29 @@ const shirt: Product = {
 showProductDetails(shirt)
 
 showProductDetails({name: "Tênis", price: 129.99, isAvailable: false})
+
+//PROPRIEDADE OPCIONAL EM INTERFACE
+
+interface User {
+  email: string,
+  role?: string
+}
+
+const showUserDetails = (user: User) => {
+    console.log(`O email do usuário é: ${user.email}`)
+    if(user.role){
+      console.log(`e seu papel na empresa é: ${user.role}`)
+    }
+}
+
+const u1:User = {
+  email: "paulo@email.com",
+  role: "admin"
+}
+
+const u2:User = {
+  email: "gabriel@email.com"
+}
+
+showUserDetails(u1)
+showUserDetails(u2)
