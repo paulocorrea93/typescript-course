@@ -12,7 +12,7 @@ const showProductDetails = (product) => {
 const shirt = {
     name: "Camisa",
     price: 29.99,
-    isAvailable: true
+    isAvailable: true,
 };
 showProductDetails(shirt);
 showProductDetails({ name: "Tênis", price: 129.99, isAvailable: false });
@@ -24,18 +24,24 @@ const showUserDetails = (user) => {
 };
 const u1 = {
     email: "paulo@email.com",
-    role: "admin"
+    role: "admin",
 };
 const u2 = {
-    email: "gabriel@email.com"
+    email: "gabriel@email.com",
 };
 showUserDetails(u1);
 showUserDetails(u2);
 const fusca = {
     brand: "VW",
-    wheels: 4
+    wheels: 4,
 };
 console.log(fusca);
 fusca.brand = "bmw";
 // fusca.wheels = 5 (erro, pois a propriedade é 'readonly')
 console.log(fusca);
+const coordX = {
+    x: 10,
+};
+console.log(coordX);
+coordX.y = 20;
+console.log(coordX);
