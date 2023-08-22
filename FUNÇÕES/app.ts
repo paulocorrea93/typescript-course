@@ -112,3 +112,13 @@ const showMessageError = (msg: string): never => {
 }
 
 // showMessageError("Algum erro!") COMENTADO PARA NÃO PARAR EXECUÇÃO DOS PRÓXIMOS CÓDIGOS
+
+// REST PARAMETERS
+
+const sumAll = (...n: number[]) =>{
+  return n.reduce((number, sum) => sum + number)
+}
+
+console.log(sumAll(1, 2, 3, 4, 5))
+console.log(sumAll(5, 234, 656))
+// console.log(sumAll("5, 234, 656")) ERRO POIS SÓ ACEITA NÚMEROS
