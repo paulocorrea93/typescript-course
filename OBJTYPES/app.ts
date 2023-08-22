@@ -1,4 +1,4 @@
-// TIPO DE OBJETO PARA FUNÇÃO COM INTERFACE
+// 1/9 TIPO DE OBJETO PARA FUNÇÃO COM INTERFACE
 
 interface Product {
   name: string,
@@ -25,7 +25,7 @@ showProductDetails(shirt)
 
 showProductDetails({name: "Tênis", price: 129.99, isAvailable: false})
 
-//PROPRIEDADE OPCIONAL EM INTERFACE
+// 2/9 PROPRIEDADE OPCIONAL EM INTERFACE
 
 interface User {
   email: string,
@@ -50,3 +50,22 @@ const u2:User = {
 
 showUserDetails(u1)
 showUserDetails(u2)
+
+// 3/9 READONLY
+
+interface Car {
+  brand: string,
+  readonly wheels: number
+}
+
+const fusca: Car = {
+  brand: "VW",
+  wheels: 4
+}
+
+console.log(fusca)
+
+fusca.brand = "bmw"
+// fusca.wheels = 5 (erro, pois a propriedade é 'readonly')
+
+console.log(fusca)
