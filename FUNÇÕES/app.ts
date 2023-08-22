@@ -122,3 +122,13 @@ const sumAll = (...n: number[]) =>{
 console.log(sumAll(1, 2, 3, 4, 5))
 console.log(sumAll(5, 234, 656))
 // console.log(sumAll("5, 234, 656")) ERRO POIS SÓ ACEITA NÚMEROS
+
+// DESTRUCTURING PARAMETER
+
+function showProductDetails({name, price}: {name: string, price: number}): string{
+  return `o nome do produto é ${name} e ele custa R$${price}`
+}
+
+const shirt = {name: "camisa", price: 29.00}
+
+console.log(showProductDetails(shirt))

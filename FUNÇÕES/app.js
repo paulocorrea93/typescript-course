@@ -80,3 +80,16 @@ const showMessageError = (msg) => {
     throw new Error(msg);
 };
 // showMessageError("Algum erro!") COMENTADO PARA NÃO PARAR EXECUÇÃO DOS PRÓXIMOS CÓDIGOS
+// REST PARAMETERS
+const sumAll = (...n) => {
+    return n.reduce((number, sum) => sum + number);
+};
+console.log(sumAll(1, 2, 3, 4, 5));
+console.log(sumAll(5, 234, 656));
+// console.log(sumAll("5, 234, 656")) ERRO POIS SÓ ACEITA NÚMEROS
+// DESTRUCTURING PARAMETER
+function showProductDetails({ name, price }) {
+    return `o nome do produto é ${name} e ele custa R$${price}`;
+}
+const shirt = { name: "camisa", price: 29.00 };
+console.log(showProductDetails(shirt));
