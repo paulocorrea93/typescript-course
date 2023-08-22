@@ -1,4 +1,4 @@
-// 1/9 TIPO DE OBJETO PARA FUNÇÃO COM INTERFACE
+// 1 de 9 TIPO DE OBJETO PARA FUNÇÃO COM INTERFACE
 
 interface Product {
   name: string;
@@ -27,7 +27,7 @@ showProductDetails(shirt);
 
 showProductDetails({ name: "Tênis", price: 129.99, isAvailable: false });
 
-// 2/9 PROPRIEDADE OPCIONAL EM INTERFACE
+// 2 de 9 PROPRIEDADE OPCIONAL EM INTERFACE
 
 interface User {
   email: string;
@@ -53,7 +53,7 @@ const u2: User = {
 showUserDetails(u1);
 showUserDetails(u2);
 
-// 3/9 READONLY
+// 3 de 9 READONLY
 
 interface Car {
   brand: string;
@@ -72,7 +72,7 @@ fusca.brand = "bmw";
 
 console.log(fusca);
 
-// 4/9 INDEX SIGNATURE
+// 4 de 9 INDEX SIGNATURE
 
 interface ObjectCoord {
   [index: string]: number;
@@ -88,7 +88,7 @@ coordX.y = 20;
 
 console.log(coordX)
 
-// 5/9 HERANÇA DE INTERFACES
+// 5 de 9 HERANÇA DE INTERFACES
 
 interface Human {
   name: string,
@@ -113,7 +113,7 @@ const goku: SuperHuman = {
 console.log(paulo)
 console.log(goku, goku.superPower[1])
 
-// 6/9 INTERSECTION TYPES
+// 6 de 9 INTERSECTION TYPES
 
 interface Character {
   name: string
@@ -133,7 +133,7 @@ const Aragorn: CharacterWeapon = {
 
 console.log(Aragorn)
 
-// 7/9 READONLY ARRAY
+// 7 de 9 READONLY ARRAY
 
 let myArray: ReadonlyArray<String> = ["Maçã", "Banana", "Laranja"]
 
@@ -148,3 +148,20 @@ myArray = myArray.map((item) => {
 })
 
 console.log(myArray)
+
+// 8 de 9 TUPLAS
+
+type fiveNumbers = [number, number, number, number, number]
+
+const myFiveNumbers: fiveNumbers = [1, 2, 3, 4, 5]
+// const myFiveNumbers: fiveNumbers = [1, "2", true, 4, 5] **ERRO POIS SÓ ACEITA TIPO NUMBER**
+// const myFiveNumbers: fiveNumbers = [1, 2, 3, 4, 5, 6] **ERRO POIS SÓ ACEITA 5 ELEMENTOS, NEM MAIS NEM MENOS**
+
+console.log(myFiveNumbers)
+
+type nameAndAge = [string, number]
+
+const anotherPerson = ["Paulo", 30]
+
+console.log(anotherPerson)
+

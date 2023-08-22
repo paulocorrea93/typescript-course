@@ -1,5 +1,5 @@
 "use strict";
-// 1/9 TIPO DE OBJETO PARA FUNÇÃO COM INTERFACE
+// 1 de 9 TIPO DE OBJETO PARA FUNÇÃO COM INTERFACE
 const showProductDetails = (product) => {
     console.log(`O nome do produto é ${product.name} e seu preço é R$${product.price}`);
     if (product.isAvailable === true) {
@@ -61,7 +61,7 @@ const Aragorn = {
     type: "Sword"
 };
 console.log(Aragorn);
-// 7/9 READONLY ARRAY
+// 7 de 9 READONLY ARRAY
 let myArray = ["Maçã", "Banana", "Laranja"];
 console.log(myArray);
 myArray.forEach((item) => {
@@ -71,3 +71,9 @@ myArray = myArray.map((item) => {
     return `Fruta: ${item}`;
 });
 console.log(myArray);
+const myFiveNumbers = [1, 2, 3, 4, 5];
+// const myFiveNumbers: fiveNumbers = [1, "2", true, 4, 5] **ERRO POIS SÓ ACEITA TIPO NUMBER**
+// const myFiveNumbers: fiveNumbers = [1, 2, 3, 4, 5, 6] **ERRO POIS SÓ ACEITA 5 ELEMENTOS, NEM MAIS NEM MENOS**
+console.log(myFiveNumbers);
+const anotherPerson = ["Paulo", 30];
+console.log(anotherPerson);
