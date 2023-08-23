@@ -13,4 +13,7 @@ const showProductName = (obj) => {
 };
 console.log(showProductName({ name: "roupa", size: "gg" }));
 console.log(showProductName({ name: "porta", color: "branca" }));
-// console.log(showProductName({nOfShirts: 50})) APRESENTA ERRO, POIS O OBJETO PRECISA TER A PROPRIEDADE 'NAME'
+const myCar = { name: "Fiesta", engine: 1.0, wheels: 5, color: "grafite" };
+const myPen = { name: "BIC", engine: false, wheels: false, color: "azul" };
+console.log(myCar);
+console.log(myPen);
