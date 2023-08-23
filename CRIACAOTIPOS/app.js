@@ -17,3 +17,14 @@ const myCar = { name: "Fiesta", engine: 1.0, wheels: 5, color: "grafite" };
 const myPen = { name: "BIC", engine: false, wheels: false, color: "azul" };
 console.log(myCar);
 console.log(myPen);
+// 4 de 9 type parameters
+function getSomeKey(obj, key) {
+    return `A chave ${key} está presente no objeto e tem o valor de ${obj[key]}`;
+}
+const server = {
+    hd: '2TB',
+    ram: '16GB'
+};
+console.log(getSomeKey(server, "hd"));
+console.log(getSomeKey(server, "ram"));
+// console.log(getSomeKey(server, "teste")) (ERRO, POIS O OBJETO NÃO TEM A PROPRIEDADE 'TESTE')
