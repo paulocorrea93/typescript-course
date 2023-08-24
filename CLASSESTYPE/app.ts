@@ -316,3 +316,30 @@ class StaticMembers {
 
 console.log(StaticMembers.prop)
 StaticMembers.propStatic()
+
+// generic class
+
+class Generica<T, U> {
+  generic1
+  generic2
+
+  constructor(generic1: T, generic2: U){
+    this.generic1 = generic1
+    this.generic2 = generic2
+  }
+
+  get showGeneric (){
+    return `esse é o ${this.generic1} e esse é o ${this.generic2}`
+  }
+}
+
+const newItem = new Generica("generico 1", "generico 2")
+
+console.log(newItem)
+
+console.log(newItem.showGeneric)
+
+const newItem2 = new Generica(21, true)
+
+console.log(typeof newItem2.generic1)
+console.log(typeof newItem2.generic2)
