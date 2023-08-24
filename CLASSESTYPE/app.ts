@@ -178,3 +178,40 @@ myCoords.fillX = 10
 myCoords.fillY = 20
 
 console.log(myCoords.showCoords)
+
+// herdando interfaces
+
+interface showTitle {
+  title: string
+}
+
+class blogPost implements showTitle {
+  title
+
+  constructor(title: string){
+    this.title = title
+  }
+
+  itemTitle(){
+    return `O título da página web é ${this.title}`
+  }
+}
+
+const webPage = new blogPost("Hello World")
+
+class Test02 {
+  title
+
+  constructor(title: string){
+    this.title = title
+  }
+
+  itemTitle(){
+    return `Esse é outro título, com o nome: ${this.title}`
+  }
+}
+
+const anotherPost = new blogPost("Hello 2")
+
+console.log(webPage)
+console.log(anotherPost)

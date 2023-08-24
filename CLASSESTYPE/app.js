@@ -108,3 +108,23 @@ const myCoords = new Coords();
 myCoords.fillX = 10;
 myCoords.fillY = 20;
 console.log(myCoords.showCoords);
+class blogPost {
+    constructor(title) {
+        this.title = title;
+    }
+    itemTitle() {
+        return `O título da página web é ${this.title}`;
+    }
+}
+const webPage = new blogPost("Hello World");
+class Test02 {
+    constructor(title) {
+        this.title = title;
+    }
+    itemTitle() {
+        return `Esse é outro título, com o nome: ${this.title}`;
+    }
+}
+const anotherPost = new blogPost("Hello 2");
+console.log(webPage);
+console.log(anotherPost);
