@@ -343,3 +343,24 @@ const newItem2 = new Generica(21, true)
 
 console.log(typeof newItem2.generic1)
 console.log(typeof newItem2.generic2)
+
+// parameter properties
+
+class ParameterProperties {
+  constructor(public name: string, private qtd: number, private price: number){
+    this.name = name;
+    this.price = price;
+    this.qtd = qtd;
+  }
+
+  get showShirtDetails(){
+    return `a ${this.name}, custa ${this.price} e tem ${this.qtd} unidades disponíveis no estoque`
+  }
+}
+
+const shirt1 = new ParameterProperties ("Camisa", 5, 19.99)
+
+console.log(shirt1.name)
+
+console.log(shirt1.showShirtDetails)
+
