@@ -364,3 +364,17 @@ console.log(shirt1.name)
 
 console.log(shirt1.showShirtDetails)
 
+// class expressions
+
+const myClass = class<T> {
+  name
+
+  constructor(name: T){
+    this.name = name;
+  }
+}
+
+const pessoa = new myClass("Paulo Gabriel")
+
+console.log(pessoa)
+console.log(pessoa.name)

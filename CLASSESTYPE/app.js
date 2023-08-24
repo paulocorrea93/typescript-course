@@ -235,3 +235,12 @@ class ParameterProperties {
 const shirt1 = new ParameterProperties("Camisa", 5, 19.99);
 console.log(shirt1.name);
 console.log(shirt1.showShirtDetails);
+// class expressions
+const myClass = class {
+    constructor(name) {
+        this.name = name;
+    }
+};
+const pessoa = new myClass("Paulo Gabriel");
+console.log(pessoa);
+console.log(pessoa.name);
