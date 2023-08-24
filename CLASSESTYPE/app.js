@@ -84,3 +84,27 @@ const Paulo2 = new Person("Paulo", "Correa");
 console.log(Paulo2.fullname);
 console.log(Paulo2.name);
 console.log(Paulo2.surname);
+// setters
+class Coords {
+    set fillX(x) {
+        if (x === 0) {
+            return;
+        }
+        this.x = x;
+        console.log("x inserido com sucesso!");
+    }
+    set fillY(y) {
+        if (y === 0) {
+            return;
+        }
+        this.y = y;
+        console.log("y inserido com sucesso!");
+    }
+    get showCoords() {
+        return `x: ${this.x}, y:${this.y}`;
+    }
+}
+const myCoords = new Coords();
+myCoords.fillX = 10;
+myCoords.fillY = 20;
+console.log(myCoords.showCoords);

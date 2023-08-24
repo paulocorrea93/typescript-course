@@ -129,14 +129,52 @@ class Person {
     this.surname = surname;
   }
 
-  get fullname(){
-    return `${this.name} ${this.surname}`
+  get fullname() {
+    return `${this.name} ${this.surname}`;
   }
-
 }
 
-const Paulo2 = new Person("Paulo", "Correa")
+const Paulo2 = new Person("Paulo", "Correa");
 
-console.log(Paulo2.fullname)
-console.log(Paulo2.name)
-console.log(Paulo2.surname)
+console.log(Paulo2.fullname);
+console.log(Paulo2.name);
+console.log(Paulo2.surname);
+
+// setters
+
+class Coords {
+  x!: number;
+  y!: number;
+
+  set fillX(x: number) {
+    if (x === 0) {
+      return;
+    }
+
+    this.x = x;
+
+    console.log("x inserido com sucesso!");
+  }
+
+  set fillY(y: number) {
+    if (y === 0) {
+      return;
+    }
+
+    this.y = y;
+
+    console.log("y inserido com sucesso!")
+  }
+
+  get showCoords(){
+    return `x: ${this.x}, y:${this.y}`
+  }
+}
+
+
+const myCoords = new Coords()
+
+myCoords.fillX = 10
+myCoords.fillY = 20
+
+console.log(myCoords.showCoords)
