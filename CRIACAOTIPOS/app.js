@@ -19,12 +19,21 @@ console.log(myCar);
 console.log(myPen);
 // 4 de 9 type parameters
 function getSomeKey(obj, key) {
+    // @ts-ignore
     return `A chave ${key} está presente no objeto e tem o valor de ${obj[key]}`;
 }
 const server = {
-    hd: '2TB',
-    ram: '16GB'
+    hd: "2TB",
+    ram: "16GB",
 };
 console.log(getSomeKey(server, "hd"));
 console.log(getSomeKey(server, "ram"));
-// console.log(getSomeKey(server, "teste")) (ERRO, POIS O OBJETO NÃO TEM A PROPRIEDADE 'TESTE')
+const showNameChar = (obj, key) => {
+    return `${obj[key]}`;
+};
+const myChar = {
+    name: "Paulo",
+    age: 30,
+    hasDriveLicense: true,
+};
+console.log(showNameChar(myChar, 'name'));
