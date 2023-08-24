@@ -56,3 +56,17 @@ class Dwarf {
 const Thorin = new Dwarf("Thorin");
 console.log(Thorin.name);
 Thorin.greeting();
+// this em classes
+class Truck {
+    constructor(name, hp) {
+        this.name = name;
+        this.hp = hp;
+    }
+    showTruckDetails() {
+        console.log(`O caminhã ${this.name} tem ${this.hp} cavalos de potência`);
+    }
+}
+const volvo = new Truck("Volvo", 400);
+const scania = new Truck("Scania", 600);
+volvo.showTruckDetails();
+scania.showTruckDetails();
