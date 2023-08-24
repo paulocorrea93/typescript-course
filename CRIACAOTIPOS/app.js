@@ -41,3 +41,18 @@ console.log(showNameChar(myChar, 'name'));
 const userName = "Paulo";
 const userName2 = "Gabriel";
 const userName4 = "João";
+const showKmTruck = (km) => {
+    return `O km do veículo é: ${km}`;
+};
+const newTruck = {
+    name: "caminhão",
+    km: 30000,
+    desc: "caminhão pipa"
+};
+console.log(showKmTruck(newTruck.km));
+const newCar = {
+    name: "carro",
+    km: 2000,
+    desc: "carro de passeio"
+};
+console.log(showKmTruck(newCar.km));

@@ -82,3 +82,29 @@ const userName2: typeof userName = "Gabriel"
 type x = typeof userName
 
 const userName4: x = "João"
+
+// 7 de 9 indexed access types
+
+type Truck = {name: string, km: number, desc: string}
+
+type Km = Truck['km']
+
+const showKmTruck = (km: Km) => {
+    return `O km do veículo é: ${km}`
+}
+
+const newTruck = {
+    name: "caminhão",
+    km: 30000,
+    desc: "caminhão pipa"
+}
+
+console.log(showKmTruck(newTruck.km))
+
+const newCar = {
+    name: "carro",
+    km: 2000,
+    desc: "carro de passeio"
+}
+
+console.log(showKmTruck(newCar.km))
