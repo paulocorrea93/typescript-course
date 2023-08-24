@@ -28,3 +28,19 @@ console.log(fusca);
 fusca.name = "Fusca Turbo";
 // fusca.wheels = 4 **EM UM READONLY, O VALOR DA PROPRIEDADE NÃO PODE SER ALTERADO, APENAS LIDO**
 console.log(fusca);
+//Herança e Super
+class Machine {
+    constructor(name) {
+        this.name = name;
+    }
+}
+const trator = new Machine("Trator");
+class KillerMachine extends Machine {
+    constructor(name, guns) {
+        super(name);
+        this.guns = guns;
+    }
+}
+const deathWing = new KillerMachine("Death Wing", 8);
+console.log(deathWing);
+console.log(trator);
