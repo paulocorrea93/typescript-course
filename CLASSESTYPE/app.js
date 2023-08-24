@@ -44,3 +44,15 @@ class KillerMachine extends Machine {
 const deathWing = new KillerMachine("Death Wing", 8);
 console.log(deathWing);
 console.log(trator);
+// metodos
+class Dwarf {
+    constructor(name) {
+        this.name = name;
+    }
+    greeting() {
+        console.log("Hey Stranger!");
+    }
+}
+const Thorin = new Dwarf("Thorin");
+console.log(Thorin.name);
+Thorin.greeting();
