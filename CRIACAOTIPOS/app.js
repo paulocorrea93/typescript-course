@@ -56,3 +56,4 @@ const newCar = {
     desc: "carro de passeio"
 };
 console.log(showKmTruck(newCar.km));
+const someVar = 5;

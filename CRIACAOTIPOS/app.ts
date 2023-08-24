@@ -108,3 +108,17 @@ const newCar = {
 }
 
 console.log(showKmTruck(newCar.km))
+
+// 8 de 9 - Condicional Expressions Types
+
+interface A {}
+
+interface B extends A {}
+
+type myType = B extends A ? number : string
+
+const someVar: myType = 5
+
+interface Teste {showName(): string}
+
+type myType2 = Teste extends {showNumber(): number} ? string : boolean
