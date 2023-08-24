@@ -258,3 +258,10 @@ class ExempleAsbClass extends AbstractClass {
 }
 const newAbstractObject = new ExempleAsbClass("Paulo Gabriel Barros Correa");
 newAbstractObject.showName();
+// relação entre classes
+class Dog {
+}
+class Cat {
+}
+const doguinho = new Cat();
+console.log(doguinho);
