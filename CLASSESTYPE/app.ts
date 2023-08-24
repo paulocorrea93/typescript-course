@@ -304,7 +304,15 @@ xPrivated.showX()
 
 xPrivated.showPrivatedMethod()
 
+// static members
 
+class StaticMembers {
+ static prop = "propriedade static"
 
+ static propStatic(){
+  console.log("esse é um método estático")
+ }
+}
 
-
+console.log(StaticMembers.prop)
+StaticMembers.propStatic()

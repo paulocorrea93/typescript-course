@@ -193,3 +193,12 @@ const xPrivated = new PrivateClass();
 xPrivated.showX();
 // console.log(xPrivated.privatedMethod())
 xPrivated.showPrivatedMethod();
+// static members
+class StaticMembers {
+    static propStatic() {
+        console.log("esse é um método estático");
+    }
+}
+StaticMembers.prop = "propriedade static";
+console.log(StaticMembers.prop);
+StaticMembers.propStatic();
