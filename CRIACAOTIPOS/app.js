@@ -57,3 +57,5 @@ const newCar = {
 };
 console.log(showKmTruck(newCar.km));
 const someVar = 5;
+const textTest = "some text";
+const exemplo3 = "exemplo1";

@@ -122,3 +122,17 @@ const someVar: myType = 5
 interface Teste {showName(): string}
 
 type myType2 = Teste extends {showNumber(): number} ? string : boolean
+
+// 9 de 9 Template literals type
+
+type testA = "text"
+type testB = `some ${testA}`
+
+const textTest: testB = "some text"
+
+type a1 = "exemplo1"
+type a2 = "exemplo2"
+
+type a3 = `${a1}` | `${a2}`
+
+const exemplo3: a3 = "exemplo1"
