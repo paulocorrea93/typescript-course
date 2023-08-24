@@ -86,35 +86,57 @@ class Dwarf {
     this.name = name;
   }
 
-  greeting(){
-    console.log("Hey Stranger!")
+  greeting() {
+    console.log("Hey Stranger!");
   }
 }
 
-const Thorin = new Dwarf("Thorin")
+const Thorin = new Dwarf("Thorin");
 
-console.log(Thorin.name)
-Thorin.greeting()
+console.log(Thorin.name);
+Thorin.greeting();
 
 // this em classes
 
 class Truck {
-  name
-  hp
+  name;
+  hp;
 
-  constructor(name: string, hp: number){
-    this.name = name
-    this.hp = hp
+  constructor(name: string, hp: number) {
+    this.name = name;
+    this.hp = hp;
   }
 
-  showTruckDetails(){
-    console.log(`O caminhã ${this.name} tem ${this.hp} cavalos de potência`)
+  showTruckDetails() {
+    console.log(`O caminhã ${this.name} tem ${this.hp} cavalos de potência`);
+  }
+}
+
+const volvo = new Truck("Volvo", 400);
+const scania = new Truck("Scania", 600);
+
+volvo.showTruckDetails();
+scania.showTruckDetails();
+
+// getters
+
+class Person {
+  name;
+  surname;
+
+  constructor(name: string, surname: string) {
+    this.name = name;
+    this.surname = surname;
+  }
+
+  get fullname(){
+    return `${this.name} ${this.surname}`
   }
 
 }
 
-const volvo = new Truck("Volvo", 400)
-const scania = new Truck("Scania", 600)
+const Paulo2 = new Person("Paulo", "Correa")
 
-volvo.showTruckDetails()
-scania.showTruckDetails()
+console.log(Paulo2.fullname)
+console.log(Paulo2.name)
+console.log(Paulo2.surname)
