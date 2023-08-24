@@ -249,3 +249,28 @@ const dInstance = new D
 
 console.log(cInstance.x)
 console.log(dInstance.x)
+
+// visibilidade: protected
+
+class E {
+  protected x = 30
+
+  protectedMethod(){
+    console.log("Esse metodo é protegido")
+  }
+}
+
+class F extends E{
+  pegarOx(){
+    console.log(instanceF.x)
+  }
+
+  protectedMethod2(){
+    instanceF.protectedMethod()
+  }
+}
+
+const instanceF = new F
+
+instanceF.pegarOx()
+instanceF.protectedMethod2()
