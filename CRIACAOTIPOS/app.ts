@@ -70,3 +70,15 @@ const myChar = {
 };
 
 console.log(showNameChar(myChar, 'name'));
+
+// 6 de 9 typeof type operator
+
+const userName: string = "Paulo"
+
+const userName2: typeof userName = "Gabriel"
+
+// const userName3: typeof userName = 3 (APRESENTA ERRO, POIS O TYPEOF DEVE CONTER O MESMO TIPO DA VARIÁVEL DE ORIGEM)
+
+type x = typeof userName
+
+const userName4: x = "João"
