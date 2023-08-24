@@ -173,3 +173,23 @@ class F extends E {
 const instanceF = new F;
 instanceF.pegarOx();
 instanceF.protectedMethod2();
+// visibilidade private
+class PrivateClass {
+    constructor() {
+        this.x = "Privado";
+    }
+    showX() {
+        console.log(this.x);
+    }
+    privatedMethod() {
+        console.log("metodo privado");
+    }
+    showPrivatedMethod() {
+        this.privatedMethod();
+    }
+}
+const xPrivated = new PrivateClass();
+// console.log(xPrivated.x)
+xPrivated.showX();
+// console.log(xPrivated.privatedMethod())
+xPrivated.showPrivatedMethod();
