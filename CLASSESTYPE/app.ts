@@ -233,3 +233,19 @@ class Base2 extends Base {
 const testeBase = new Base2()
 
 testeBase.someMethod()
+
+// visibilidade: public
+
+class C {
+  x = 10
+}
+
+class D extends C {
+
+}
+
+const cInstance = new C
+const dInstance = new D
+
+console.log(cInstance.x)
+console.log(dInstance.x)
