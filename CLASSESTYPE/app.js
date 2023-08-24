@@ -128,3 +128,16 @@ class Test02 {
 const anotherPost = new blogPost("Hello 2");
 console.log(webPage);
 console.log(anotherPost);
+// override de métodos
+class Base {
+    someMethod() {
+        console.log("alguma coisa");
+    }
+}
+class Base2 extends Base {
+    someMethod() {
+        console.log("alguma outra coisa");
+    }
+}
+const testeBase = new Base2();
+testeBase.someMethod();
