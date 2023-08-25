@@ -9,3 +9,8 @@ const greeting_js_1 = __importDefault(require("./greeting.js"));
 //117 de 122 - importando variáveis
 const variable_js_1 = require("./variable.js");
 console.log(variable_js_1.x);
+//118 de 122 - multiplas importações
+const multiple_js_1 = require("./multiple.js");
+console.log(multiple_js_1.a);
+console.log(multiple_js_1.b);
+(0, multiple_js_1.myFunction)();
