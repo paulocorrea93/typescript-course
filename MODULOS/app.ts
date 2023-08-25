@@ -18,3 +18,9 @@ console.log(a)
 console.log(b)
 
 myFunction()
+
+//119 de 122 alias de importação
+
+import {changeName as name} from './changeName.js'
+
+console.log(name)

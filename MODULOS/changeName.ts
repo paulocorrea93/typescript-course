@@ -1,0 +1,1 @@
+export const changeName = "Mudando nome da variável"

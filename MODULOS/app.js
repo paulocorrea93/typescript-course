@@ -14,3 +14,6 @@ const multiple_js_1 = require("./multiple.js");
 console.log(multiple_js_1.a);
 console.log(multiple_js_1.b);
 (0, multiple_js_1.myFunction)();
+//119 de 122 alias de importação
+const changeName_js_1 = require("./changeName.js");
+console.log(changeName_js_1.changeName);
