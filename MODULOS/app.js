@@ -46,3 +46,12 @@ console.log(myNumbers);
 const n3 = myNumbers.n3;
 console.log(n3);
 myNumbers.showNumber();
+class User {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+const paulo = new User("Paulo", 30);
+console.log(paulo);
+//122 de 122 - conclusão teórica do módulo
