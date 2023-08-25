@@ -24,3 +24,15 @@ myFunction()
 import {changeName as name} from './changeName.js'
 
 console.log(name)
+
+//120 de 122 importação de diversos itens
+
+import * as myNumbers from './numbers.js'
+
+console.log(myNumbers)
+
+const n3 = myNumbers.n3
+
+console.log(n3)
+
+myNumbers.showNumber()
