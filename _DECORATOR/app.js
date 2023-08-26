@@ -158,3 +158,35 @@ const newBook = new Book(33);
 const newPen = new Pen(44);
 console.log(newBook);
 console.log(newPen);
+// 132 de 133 - verificar se usuário pode ou não fazer alterações no sistema com decorator
+function anotherPostValidation() {
+    return function (target, key, descriptor) {
+        const childFunction = descriptor.value;
+        // console.log(childFunction)
+        descriptor.value = function (...args) {
+            if (args[1] === true) {
+                console.log("O usuário já postou.");
+                return null;
+            }
+            else {
+                return childFunction.apply(this, args);
+            }
+        };
+        return descriptor;
+    };
+}
+class Post {
+    constructor() {
+        this.alreadyPosted = false;
+    }
+    post(content, alreadyPosted) {
+        this.alreadyPosted = true;
+        console.log(`Post do usuário: ${content}`);
+    }
+}
+__decorate([
+    anotherPostValidation()
+], Post.prototype, "post", null);
+const newPost = new Post();
+newPost.post("Meu primeiro Post.", newPost.alreadyPosted);
+newPost.post("Meu segundo Post.", newPost.alreadyPosted);
