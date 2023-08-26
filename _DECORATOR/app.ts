@@ -113,7 +113,7 @@ class Machine {
 
   @enumerable(true)
   showName() {
-    console.log(this)
+    console.log(this);
     return `O nome da máquina é: ${this.name}`;
   }
 }
@@ -125,60 +125,88 @@ console.log(trator.showName());
 //129 de 133 - Accessor decorator
 
 class Monster {
-  name?
-  age?
+  name?;
+  age?;
 
-  constructor(name: string, age: number){
-    this.name = name
-    this.age = age
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
   }
-  
 
   @enumerable(true)
-  get showName(){
-    return `nome do monstro: ${this.name}`
+  get showName() {
+    return `nome do monstro: ${this.name}`;
   }
 
-  get showAge(){
-    return `idade do monstro ${this.age}`
+  get showAge() {
+    return `idade do monstro ${this.age}`;
   }
 }
 
-const charmander = new Monster("Charmander", 10)
+const charmander = new Monster("Charmander", 10);
 
-console.log(charmander)
+console.log(charmander);
 
 //130 de 133 - Property decorator
 
-function formatNumber(){
-  return function(target: Object, propertyKey: string){
-    let value: string
+function formatNumber() {
+  return function (target: Object, propertyKey: string) {
+    let value: string;
 
     const getter = () => {
-      return value
-    }
+      return value;
+    };
 
     const setter = (newVal: string) => {
-      value = newVal.padStart(5, "0")
-    }
+      value = newVal.padStart(5, "0");
+    };
 
     Object.defineProperty(target, propertyKey, {
       set: setter,
-      get: getter
-    })
-  }
-
+      get: getter,
+    });
+  };
 }
 
 class ID {
   @formatNumber()
-  id
+  id;
 
-  constructor(id: string){
-    this.id = id
+  constructor(id: string) {
+    this.id = id;
   }
 }
 
-const newItem = new ID("1")
+const newItem = new ID("1");
 
-console.log(newItem)
+console.log(newItem);
+
+// 131 de 133 - class decorator para inserir data de criação de objetos
+
+function createdDate(created: Function) {
+  created.prototype.createdAt = new Date();
+}
+
+@createdDate
+class Book {
+  id;
+
+  constructor(id: number) {
+    this.id = id;
+  }
+}
+
+@createdDate
+class Pen {
+  id;
+
+  constructor(id: number) {
+    this.id = id;
+  }
+}
+
+const newBook = new Book(33);
+const newPen = new Pen(44);
+
+console.log(newBook)
+console.log(newPen)
