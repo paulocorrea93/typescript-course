@@ -122,7 +122,7 @@ const trator = new Machine("Trator");
 
 console.log(trator.showName());
 
-//129 de 133 - Acessor decorator
+//129 de 133 - Accessor decorator
 
 class Monster {
   name?
@@ -147,3 +147,38 @@ class Monster {
 const charmander = new Monster("Charmander", 10)
 
 console.log(charmander)
+
+//130 de 133 - Property decorator
+
+function formatNumber(){
+  return function(target: Object, propertyKey: string){
+    let value: string
+
+    const getter = () => {
+      return value
+    }
+
+    const setter = (newVal: string) => {
+      value = newVal.padStart(5, "0")
+    }
+
+    Object.defineProperty(target, propertyKey, {
+      set: setter,
+      get: getter
+    })
+  }
+
+}
+
+class ID {
+  @formatNumber()
+  id
+
+  constructor(id: string){
+    this.id = id
+  }
+}
+
+const newItem = new ID("1")
+
+console.log(newItem)
