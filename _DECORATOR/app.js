@@ -190,3 +190,35 @@ __decorate([
 const newPost = new Post();
 newPost.post("Meu primeiro Post.", newPost.alreadyPosted);
 newPost.post("Meu segundo Post.", newPost.alreadyPosted);
+//133 de 133 - validação de número máximo de caracteres com decorator
+function Max(limit) {
+    return function (target, propertyKey) {
+        let value;
+        const getter = function () {
+            return value;
+        };
+        const setter = function (newVal) {
+            if (newVal.length > limit) {
+                console.log(`O nome do usuário deve ter até ${limit} caracteres.`);
+            }
+            else {
+                value = newVal;
+            }
+        };
+        Object.defineProperty(target, propertyKey, {
+            get: getter,
+            set: setter
+        });
+    };
+}
+class Admin {
+    constructor(name) {
+        this.name = name;
+    }
+}
+__decorate([
+    Max(10)
+], Admin.prototype, "name", void 0);
+const newUser01 = new Admin("Paulo");
+const newUser02 = new Admin("PauloCorrea");
+console.log(newUser01.name);
